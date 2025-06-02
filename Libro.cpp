@@ -7,7 +7,11 @@
 #include <string>
 using namespace std;
 //*---------------------------------------------------------------------------------------------------------*
-Libro ::Libro(){numeroDeLibros = 1000;nombreN="";librosComprados = 0; } //constructor por definicion
+Libro ::Libro(){
+    numeroDeLibros = 1000;
+    nombreN="";
+    librosComprados = 0; 
+} //constructor por definicion
 //*---------------------------------------------------------------------------------------------------------*
 Libro::Libro(int librosComprados,int numeroDeLibros, string nombreN){ //Cosntructor con parámetros
     this->numeroDeLibros = numeroDeLibros;
@@ -17,9 +21,27 @@ Libro::Libro(int librosComprados,int numeroDeLibros, string nombreN){ //Cosntruc
 /*---------------------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------------------------------------*/
-int Libro::getNumeroDeLibros(){ //Método getter del número de libros
+int Libro::getNumeroDeLibros() const{ //Método getter del número de libros
     return numeroDeLibros;
 }
+/*---------------------------------------------------------------------------------------------------------*/
+string Libro::getNombreN() const {return nombreN;}
+void Libro::setNombreN(string nombreN)
+{
+    this->nombreN = nombreN;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+
+int Libro::getLibrosComprados() const {
+    return librosComprados;
+}
+
+void Libro::mostrarLibros()//muestra los tipos de libros
+{
+    string pip= getNombreN();
+    cout<<" libros de "<<pip;
+}
+
 /*---------------------------------------------------------------------------------------------------------*/
 void Libro::setNumeroDeLibros(int numeroDeLibros){ //Método setter para el número de libros
     if (numeroDeLibros <= 0)
@@ -30,18 +52,3 @@ void Libro::setNumeroDeLibros(int numeroDeLibros){ //Método setter para el núm
     }
     this->numeroDeLibros = numeroDeLibros;
 }
-/*---------------------------------------------------------------------------------------------------------*/
-string Libro::getNombreN(){return nombreN;}
-void Libro::setNombreN(string nombreN)
-{
-    this->nombreN = nombreN;
-}
-/*---------------------------------------------------------------------------------------------------------*/
-
-int Libro::getLibrosComprados(){return librosComprados;}
-void Libro::mostrarLibros()//muestra los tipos de libros
-{
-    string pip= getNombreN();
-    cout<<" libros de "<<pip;
-}
-

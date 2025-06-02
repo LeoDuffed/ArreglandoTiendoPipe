@@ -10,20 +10,22 @@ using namespace std;
 
 
 class Libro{
+
 private:
     string nombreN;
     int librosComprados;
     int numeroDeLibros;
-public:
 
+public:   
+    // Constructores y Destructor
     Libro();
     Libro(int librosComprados,int numeroDeLibros, string nombreN);
     virtual ~Libro() = default;
 
     // Getters
-    string getNombreN();
-    int getNumeroDeLibros();
-    int getLibrosComprados();
+    string getNombreN() const;
+    int getNumeroDeLibros() const;
+    int getLibrosComprados() const;
 
     // Setters
     void setNombreN(string nombreN);

@@ -12,10 +12,12 @@
 using namespace std;
 
 class Tienda : public Libro{
+
 private:
     string nombre;
+    
 public:
-    // Construcotores 
+    // Constructores y Destructor 
     Tienda()
     {
         nombre = "";
@@ -24,7 +26,7 @@ public:
     ::Libro(librosComprados,numeroDeLibros,nombreN)
     {
         nombre = "";
-        this->nombre = nombreN;
+        this->nombre = nombre;
     };
     ~Tienda(){}
 
@@ -35,7 +37,7 @@ public:
     void setNombre();
 
     // Funciones
-    int comprarLibros() const override;
+    int comprarLibros();
     void imprimirTicket();
     void ticket();
 
