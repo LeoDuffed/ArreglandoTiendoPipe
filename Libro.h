@@ -1,5 +1,6 @@
 //
 // Created by Felipe on 11/22/2024.
+// Mejorado por Leonardo 
 //
 
 #ifndef LIBRO_H
@@ -18,12 +19,17 @@ public:
     Libro();
     Libro(int librosComprados,int numeroDeLibros, string nombreN);
     virtual ~Libro() = default;
+
+    // Getters
     string getNombreN();
-    void setNombreN(string nombreN);
     int getNumeroDeLibros();
     int getLibrosComprados();
+
+    // Setters
+    void setNombreN(string nombreN);
     void setLibrosComprados(int librosComprados);
     void setNumeroDeLibros(int numeroDeLibros);
+
     virtual int comprarLibros() const
     {
         return librosComprados;

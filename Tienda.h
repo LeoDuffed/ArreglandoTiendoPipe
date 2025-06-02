@@ -1,5 +1,6 @@
 //
 // Created by Felipe on 11/22/2024.
+// Mejorado por Leonardo 
 //
 
 #ifndef TIENDA_H
@@ -14,6 +15,7 @@ class Tienda : public Libro{
 private:
     string nombre;
 public:
+    // Construcotores 
     Tienda()
     {
         nombre = "";
@@ -25,8 +27,14 @@ public:
         this->nombre = nombreN;
     };
     ~Tienda(){}
+
+    // Getter
     string getNombre();
+
+    // Setter
     void setNombre();
+
+    // Funciones
     int comprarLibros() const override;
     void imprimirTicket();
     void ticket();

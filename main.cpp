@@ -1,4 +1,5 @@
 //Felipe Gutierrez Herrera
+// Mejorado por Leonardo 
 //A01662377
 //Hecho el 28/11/2024
 #include <iostream>

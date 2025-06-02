@@ -1,5 +1,6 @@
 //
 // Created by felipe on 11/22/2024.
+// Mejorado por Leonardo 
 //
 #include "Libro.h"
 #include <iostream>
